@@ -1,19 +1,23 @@
+'use client';
 import { UserRound } from "lucide-react";
 import { Button } from "antd";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {};
 
-export const Nav = (props: Props) => {
+const Nav = (props: Props) => {
   return (
-    <nav className="w-full py-8">
-      <article className="w-full flex justify-between max-w-6xl mx-auto">
-        <Image
-          src="/imgs/logo.png"
-          alt="Logo Metro"
-          width={150}
-          height={50}
-        ></Image>
+    <header className="w-full">
+      <nav className="w-full py-8 w-full flex justify-between max-w-6xl mx-auto">
+        <Link href="/">
+          <Image
+            src="/imgs/logo.png"
+            alt="Logo Metro"
+            width={150}
+            height={50}
+          />
+        </Link>
         <Button
           rootClassName="flex items-center h-full"
           type="primary"
@@ -21,11 +25,12 @@ export const Nav = (props: Props) => {
           name="hola"
           title="hola"
           icon={<UserRound className="h-full" size={16} />}
-          //   icon={<UserRound className="h-full align-middle" />}
         >
           Hola Children
         </Button>
-      </article>
-    </nav>
+      </nav>
+    </header>
+
   );
 };
+export default Nav;

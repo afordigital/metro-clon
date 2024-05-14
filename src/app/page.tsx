@@ -1,7 +1,8 @@
 "use client";
+// Esto deberia ser un componente de servidor, y mover el form a otro componente
+// y este ser cliente
 
 import { useState } from "react";
-import { Nav } from "./components/Nav";
 
 export default function Home() {
   const [schedule, setSchedule] = useState(null);
@@ -27,10 +28,6 @@ export default function Home() {
 
   return (
     <main className="flex w-screen min-h-screen flex-col items-center justify-between">
-      <header className="w-full">
-        <Nav></Nav>
-      </header>
-
       {/* <form onSubmit={handleSubmit}>
         <button>Submit</button>
       </form> */}
